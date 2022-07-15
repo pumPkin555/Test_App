@@ -14,9 +14,7 @@ extension UserDefaults {
     }
     
     static func save(string value: String) {
-        value == .emptyString
-        ? UserDefaults.standard.set(String.savedEmptyString, forKey: .key)
-        : UserDefaults.standard.set(value, forKey: .key)
+        UserDefaults.standard.set(value, forKey: .key)
     }
     
     static func getValue(for key: String) -> String {

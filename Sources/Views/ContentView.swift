@@ -44,11 +44,13 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 50)
                 
-                HStack {
                     Button(Constatns.saveButtonTitle) {
                         model.saveString(model.randomString)
                     }
-                    .frame(width: UIScreen.main.bounds.width / 2 - 10, height: Constatns.buttonHeight)
+                    .frame(
+                        width: Constatns.buttonWidth,
+                        height: Constatns.buttonHeight
+                    )
                     .background(Color.black)
                     .foregroundColor(Color.white)
                     .font(
@@ -59,22 +61,10 @@ struct ContentView: View {
                         )
                     )
                     .cornerRadius(.defaultRadius)
-                    
-                    Button(Constatns.reloadButtonTitle) {
-                        model.fetchData()
-                    }
-                    .frame(width: UIScreen.main.bounds.width / 2 - 10, height: Constatns.buttonHeight)
-                    .background(Color.green)
-                    .foregroundColor(Color.black)
-                    .font(
-                        Font.system(
-                            size: Constatns.buttonTextSize,
-                            weight: .heavy,
-                            design: .rounded
-                        )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: .defaultRadius)
+                            .stroke(Color.white, lineWidth: 3)
                     )
-                    .cornerRadius(.defaultRadius)
-                }
             }
             
             
@@ -99,6 +89,7 @@ private extension ContentView {
         static let reloadButtonTitle = "Reload"
         static let buttonHeight: CGFloat = 50
         static let buttonTextSize: CGFloat = 25
+        static let buttonWidth = UIScreen.main.bounds.width - 100
     }
     
 }

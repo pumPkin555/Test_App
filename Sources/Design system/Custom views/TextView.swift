@@ -22,21 +22,44 @@ struct TextView: UIViewRepresentable {
     // MARK: Functions
     
     func makeUIView(context: Context) -> UITextView {
-        return makeTextView()
+        makeTextView(context: context)
     }
     
     func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.text = text
     }
 
+    func makeCoordinator() -> Coordinator {
+        Coordinator($text)
+    }
+
+}
+
+// MARK: - Coordinator
+
+extension TextView {
+    
+    class Coordinator: NSObject, UITextViewDelegate {
+        var text: Binding<String>
+
+        init(_ text: Binding<String>) {
+            self.text = text
+        }
+
+        func textViewDidChange(_ textView: UITextView) {
+            self.text.wrappedValue = textView.text
+        }
+    }
+    
 }
 
 // MARK: - Private functions
 
 private extension TextView {
     
-    func makeTextView() -> UITextView {
+    func makeTextView(context: Context) -> UITextView {
         let textView = UITextView()
+        
         textView.font = Constants.font
         textView.isSelectable = true
         textView.isUserInteractionEnabled = true
@@ -44,7 +67,8 @@ private extension TextView {
         textView.textColor = .label
         textView.textContainer.lineBreakMode = .byWordWrapping
         textView.textContainer.lineFragmentPadding = Constants.lineFragmentPadding
-        
+        textView.delegate = context.coordinator
+
         return textView
     }
     

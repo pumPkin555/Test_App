@@ -30,7 +30,7 @@
 		CA313A79288197980095BF32 /* RandomStringErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringErrorMessages.swift; sourceTree = "<group>"; };
 		CA313A7D2881A62E0095BF32 /* RandomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomString.swift; sourceTree = "<group>"; };
 		CA313A7F2881A6CF0095BF32 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
-		CA313A812881B9840095BF32 /* TestApp-ViktorIvanov-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TestApp-ViktorIvanov-Info.plist"; sourceTree = "<group>"; };
+		CA313A812881B9840095BF32 /* TestApp-ViktorIvanov-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-ViktorIvanov-Info.plist"; sourceTree = "<group>"; };
 		CA313A822881BD220095BF32 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		CA313A842881BDA50095BF32 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		CA313A862881BF750095BF32 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		CA5A50F12880545F00D9E8E8 = {
 			isa = PBXGroup;
 			children = (
-				CA313A812881B9840095BF32 /* TestApp-ViktorIvanov-Info.plist */,
 				CA5A50FC2880545F00D9E8E8 /* Sources */,
+				CAAF3D932882001600FB6DE6 /* Resources */,
 				CA5A50FB2880545F00D9E8E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +140,7 @@
 		CA5A50FC2880545F00D9E8E8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CAAF3D922881FFF500FB6DE6 /* App */,
 				CA3896FC2881620E00780F58 /* Common */,
 				CA313A7B2881A6220095BF32 /* Models */,
 				CA3896F82881458F00780F58 /* Design system */,
@@ -147,8 +148,6 @@
 				CA670842288097EA00157803 /* Repositories */,
 				CA67083C2880922B00157803 /* ViewModels */,
 				CA67083B2880921100157803 /* Views */,
-				CA5A50FD2880545F00D9E8E8 /* TestApp_ViktorIvanovApp.swift */,
-				CA5A51012880546000D9E8E8 /* Assets.xcassets */,
 				CA5A51032880546000D9E8E8 /* Preview Content */,
 			);
 			path = Sources;
@@ -202,6 +201,23 @@
 				CA313A8A2881C5870095BF32 /* RandomStringAPIServiceIO.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CAAF3D922881FFF500FB6DE6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CA5A50FD2880545F00D9E8E8 /* TestApp_ViktorIvanovApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CAAF3D932882001600FB6DE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA5A51012880546000D9E8E8 /* Assets.xcassets */,
+				CA313A812881B9840095BF32 /* TestApp-ViktorIvanov-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,11 +432,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = /Users/anduser/Documents/Projects/TestApp_ViktorIvanov/Sources/Assets.xcassets;
+				DEVELOPMENT_ASSET_PATHS = /Users/anduser/Documents/Projects/TestApp_ViktorIvanov/Resources/Assets.xcassets;
 				DEVELOPMENT_TEAM = AD8W6UHLYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TestApp-ViktorIvanov-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/TestApp-ViktorIvanov-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,7 +466,7 @@
 				DEVELOPMENT_TEAM = AD8W6UHLYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TestApp-ViktorIvanov-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/TestApp-ViktorIvanov-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
