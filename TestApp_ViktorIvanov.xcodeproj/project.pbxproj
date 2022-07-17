@@ -424,7 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = /Users/anduser/Documents/Projects/TestApp_ViktorIvanov/Resources/Assets.xcassets;
+				DEVELOPMENT_ASSET_PATHS = "$(SRCROOT)/Resources/Assets.xcassets";
 				DEVELOPMENT_TEAM = AD8W6UHLYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -454,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "/Users/anduser/Documents/Projects/TestApp_ViktorIvanov/Sources/Preview Content/Preview Assets.xcassets";
+				DEVELOPMENT_ASSET_PATHS = "$(SRCROOT)/Sources/Preview Content/Preview Assets.xcassets";
 				DEVELOPMENT_TEAM = AD8W6UHLYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
