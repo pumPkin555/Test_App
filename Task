@@ -1,0 +1,8 @@
+Task (criteria):
+
+- добавить TextView на экран
+- использовать SwiftUI вместе с UIViewReperesenеtable
+- архитектура ViewModel c Combine
+- вытянуть с любого Api любую  строку и показать ее в TextView
+- должна быть возможность редактировать эту сроку в TextView
+- добавить кнопку которая будет сохранять эту строку в UserDefaults

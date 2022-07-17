@@ -5,8 +5,10 @@
 //  Created by anduser on 15.07.2022.
 //
 
+import Combine
+
 protocol RandomStringPerositoryProtocol {
     
-    func fetchData(completion: @escaping (Result<RandomStirng, RandomStringError>) -> Void)
+    func fetchData(completion: @escaping (AnyPublisher<RandomStirng, Error>) -> Void)
     
 }

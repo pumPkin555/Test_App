@@ -5,7 +5,10 @@
 //  Created by anduser on 14.07.2022.
 //
 
-final class RandomStringRepository: RandomStringPerositoryProtocol {
+import Combine
+import Foundation
+
+final class RandomStringRepository {
     
     // MARK: - Private
     
@@ -19,10 +22,14 @@ final class RandomStringRepository: RandomStringPerositoryProtocol {
         self.apiService = apiService
     }
     
-    // MARK: - Public functions
+}
+
+// MARK: - RandomStringPerositoryProtocol
+
+extension RandomStringRepository: RandomStringPerositoryProtocol {
     
-    func fetchData(completion: @escaping (Result<RandomStirng, RandomStringError>) -> Void) {
-        apiService.fetchData(completion: completion)
+    func fetchData(completion: @escaping (AnyPublisher<RandomStirng, Error>) -> Void) {
+        completion(apiService.fetchData())
     }
     
 }

@@ -7,4 +7,6 @@
 
 struct RandomStirng: Decodable {
     let activity: String
+    let type: String
+    let participants: Int
 }

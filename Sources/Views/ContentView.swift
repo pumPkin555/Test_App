@@ -30,7 +30,7 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 50)
                 
-                TextView(text: $model.randomString)
+                TextView(text: $model.resultMessage)
                     .background(Color.yellow)
                     .cornerRadius(.defaultRadius)
                     .overlay(
@@ -44,30 +44,28 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 50)
                 
-                    Button(Constatns.saveButtonTitle) {
-                        model.saveString(model.randomString)
-                    }
-                    .frame(
-                        width: Constatns.buttonWidth,
-                        height: Constatns.buttonHeight
+                Button(Constatns.saveButtonTitle) {
+                    model.saveString(model.resultMessage)
+                }
+                .frame(
+                    width: Constatns.buttonWidth,
+                    height: Constatns.buttonHeight
+                )
+                .background(Color.black)
+                .foregroundColor(Color.white)
+                .font(
+                    Font.system(
+                        size: Constatns.buttonTextSize,
+                        weight: .heavy,
+                        design: .rounded
                     )
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .font(
-                        Font.system(
-                            size: Constatns.buttonTextSize,
-                            weight: .heavy,
-                            design: .rounded
-                        )
-                    )
-                    .cornerRadius(.defaultRadius)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: .defaultRadius)
-                            .stroke(Color.white, lineWidth: 3)
-                    )
+                )
+                .cornerRadius(.defaultRadius)
+                .overlay(
+                    RoundedRectangle(cornerRadius: .defaultRadius)
+                        .stroke(Color.white, lineWidth: 3)
+                )
             }
-            
-            
         }
         .onAppear {
             model.onAppear()

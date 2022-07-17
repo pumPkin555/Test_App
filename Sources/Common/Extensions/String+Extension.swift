@@ -10,6 +10,7 @@ import Foundation
 extension String {
     
     static let emptyString = ""
+    static let errorText = "Bad request. \nPlease try again."
     
 }
 
